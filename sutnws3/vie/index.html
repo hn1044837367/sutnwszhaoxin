@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网管招新系统</title>
+    {% load static %}
+    <script type='text/javascript' src="{% static 'jquery/dist/jquery.js' %}"></script>
+    <script type='text/javascript' src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航条 -->
+    
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">网管招新系统
+                   </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              
+
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/daimianshi">待面试</a></li>
+
+                </ul>
+
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/yimianshi">已面试</a></li>
+
+                </ul>
+
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/yixuanrenyuan">已选人员</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/luoxuanrenyuan">落选人员</a></li>
+                </ul>
+
+
+       
+
+
+
+
+                <form class="navbar-form navbar-left"  id="s" action="/s" method="GET">
+                    <div class="form-group">
+                        <input type="text" class="form-control"   name='studentid' placeholder="被查询学生的学号">
+                    </div>
+                    <button type="submit" class="btn btn-default" >查询</button>
+                </form>
+
+                <ul class="nav navbar-nav  navbar-right">
+                    
+                           <li><a href="/logout">退出登录</a></li>
+                    </ul>
+
+                    <p class="navbar-text navbar-right "> 当前用户：{{request.session.user}} </p>
+             
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <!-- 表格 -->
+
+
+      <div class="row">
+       
+       
+          
+            <table class="table table-hover ">
+                <tr>
+                        <td></td>
+                    <td>编号</td>
+                    <td>姓名</td>
+                    <td>学号</td>
+                    <td>性别</td>
+                    <td>联系方式</td>
+                    <td>QQ </td>
+                    <td>特长爱好</td>
+                    <td>第一选择</td>
+                    <td>第二选择</td>
+                    <td>第三选择</td>
+                    <td>面试官</td>
+                    
+                    <td></td>
+                    </tr>
+
+                    {% for student in students %}
+                    <tr>
+                        <td></td>   
+                        <td>{{student.id}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.studentid}}</td>
+                        <td>{{student.sex}}</td>
+                        <td>{{student.phone}}</td>
+                        <td>{{student.qq}}</td>
+                        <td>{{student.evaluation}}</td>
+                        <td>{{student.first}}</td>
+                        <td>{{student.second}}</td>
+                        <td>{{student.third}}</td>
+                        <td>{{student.interview}}</td>
+                        
+                        <td><a href="/rename/?sid={{student.id}}">管理</a></td>
+
+                        
+                    </tr>
+                    {% endfor %}
+              </table>
+        
+          <!-- Optional: clear the XS cols if their content doesn't match in height -->
+      
+        
+      </div>
+      
+    {% load static %}
+    <script type='text/javascript' src="{% static 'jquery/dist/jquery.js' %}"></script>
+    <script type='text/javascript' src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+
+         <!-- <script>
+            $('#s').on('form', function (e) {
+              e.preventDefault()
+              var formData = $(this).serialize()
+              $.ajax({
+                url: '/s',
+                type: 'get',
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+            var err_code = data.code
+            if (err_code === 0) {
+              window.location.href = '/s'
+            } else if (err_code === 200) {
+              window.alert('用户名或者密码错误')
+            } else if (err_code === 500) {
+              window.alert('服务器忙，请稍后重试！')
+            }
+          }
+        })
+            })
+          </script> -->
+
+
+
+</body>
+
+</html>

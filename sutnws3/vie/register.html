@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{r}}</title>
+    {% load static %}
+
+
+    <link  href="{% static 'css/bootstrap.css' %}"  rel="stylesheet" type="text/css" media="all"/>
+    <link  href="{% static 'css/bootstrap.min.css' %}"  rel="stylesheet" type="text/css" media="all"/>
+    <link  href="{% static 'css/bootstrap-themep.css' %}"  rel="stylesheet" type="text/css" media="all"/>
+    <link  href="{% static 'css/bootstrap-theme.minp.css' %}"  rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  </head>
+
+
+  <body>
+    <div class="main">
+
+      <form id="register_form">
+      
+     
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br><br>
+<!-- 姓名 -->
+<div></div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-3"></div>
+            <div class="col-xs-4 col-sm-1">  
+              <div class="form-group">
+                <label for="name"><h4>姓名</h4></label>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-3">   
+                <div class="form-group">
+                  <input type="name" class="form-control" id="studentname" name="name" placeholder="请输入姓名" autofocus>
+                </div>
+              </div>
+              <!-- Optional: clear the XS cols if their content doesn't match in height -->
+            <div class="clearfix visible-xs-block"></div>
+            <div class="col-xs-3 col-sm-5"></div>
+          </div>
+
+
+<!-- 性别 -->
+          <div class="row">
+              <div class="col-xs-1 col-sm-3"></div>
+              <div class="col-xs-4 col-sm-1">  
+                <div class="form-group">
+                  <label ><h4>姓别</h4></label>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-3">   
+                  <div class="radio">
+                      <label>
+                        <input type="radio" name="sex" id="optionsRadios1" value="男" checked>男
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="sex" id="optionsRadios2" value="女">女
+                      </label>
+                    </div>
+                </div>
+                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+              <div class="clearfix visible-xs-block"></div>
+              <div class="col-xs-3 col-sm-5"></div>
+            </div>
+
+<!-- 学号 -->
+            <div class="row">
+                <div class="col-xs-1 col-sm-3"></div>
+                <div class="col-xs-4 col-sm-1">  
+                  <div class="form-group">
+                    <label for="studentid"><h4>学号</h4></label>
+                  </div>
+                </div>
+                <div class="col-xs-4 col-sm-3">   
+                    <div class="form-group">
+                      <input type="name" class="form-control" id="studentid" name="studentid" placeholder="请输入学号" >
+                    </div>
+                  </div>
+                  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-3 col-sm-5"></div>
+              </div>
+
+
+<!-- 所属学院专业 -->
+            <div class="row">
+              <div class="col-xs-1 col-sm-3"></div>
+              <div class="col-xs-4 col-sm-1">  
+                <div class="form-group">
+                  <label for="studentid"><h4>所属学院专业</h4></label>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-3">   
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="subject" name="subject" placeholder="请输入你所在的学院专业" >
+                  </div>
+                </div>
+                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+              <div class="clearfix visible-xs-block"></div>
+              <div class="col-xs-3 col-sm-5"></div>
+            </div>
+<!-- 联系方式 -->
+
+              <div class="row">
+                  <div class="col-xs-1 col-sm-3"></div>
+                  <div class="col-xs-4 col-sm-1">  
+                    <div class="form-group">
+                      <label for="phone"><h4>联系方式</h4></label>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-3">   
+                      <div class="form-group">
+                        <input type="name" class="form-control" id="phone" name="phone" placeholder="请输入联系方式，如手机号" >
+                      </div>
+                    </div>
+                    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-xs-3 col-sm-5"></div>
+                </div>
+
+<!-- qq -->
+
+                <div class="row">
+                    <div class="col-xs-1 col-sm-3"></div>
+                    <div class="col-xs-4 col-sm-1">  
+                      <div class="form-group">
+                        <label for="qq"><h4>QQ</h4></label>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">   
+                        <div class="form-group">
+                          <input type="name" class="form-control" id="qq" name="qq" placeholder="请输入qq" >
+                        </div>
+                      </div>
+                      <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-3 col-sm-5"></div>
+                  </div>
+
+<!-- 特长爱好 -->
+
+                  <div class="row">
+                      <div class="col-xs-1 col-sm-3"></div>
+                      <div class="col-xs-4 col-sm-1">  
+                        <div class="form-group">
+                          <label for="evaluation"><h4>特长爱好</h4></label>
+                        </div>
+                      </div>
+                      <div class="col-xs-4 col-sm-3">   
+                          <div class="form-group">
+                              <textarea class="form-control" rows="3"   name="evaluation">请简单介绍自己的特长爱好</textarea>
+                          </div>
+                        </div>
+                        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                      <div class="clearfix visible-xs-block"></div>
+                      <div class="col-xs-3 col-sm-5"></div>
+                    </div>
+
+<!-- 请选择你想加入的部门 -->
+<!-- 第一选择 -->
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-3"></div>
+                        <div class="col-xs-4 col-sm-1">  
+                          <div class="form-group">
+                            <label for=""><h4>第一选择</h4></label>
+                          </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3">   
+                            <select class="form-control"  name="first">
+                                <option>技术部</option>
+                                <option>影音部</option>
+                                <option>宣传部</option>
+                                <option>策划部</option>
+                                <option>外事部</option>
+                                <option>采编部</option>
+                              </select>
+                          </div>
+                          <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-3 col-sm-5"></div>
+                      </div>
+
+<!-- 第二选择 -->
+
+                      <div class="row">
+                          <div class="col-xs-1 col-sm-3"></div>
+                          <div class="col-xs-4 col-sm-1">  
+                            <div class="form-group">
+                              <label for=""><h4>第二选择</h4></label>
+                            </div>
+                          </div>
+                          <div class="col-xs-4 col-sm-3">   
+                              <select class="form-control"  name="second">
+                                  <option>技术部</option>
+                                  <option>影音部</option>
+                                  <option>宣传部</option>
+                                  <option>策划部</option>
+                                  <option>外事部</option>
+                                  <option>采编部</option>
+                                </select>
+                            </div>
+                            <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                          <div class="clearfix visible-xs-block"></div>
+                          <div class="col-xs-3 col-sm-5"></div>
+                        </div>
+<!-- 第三选择 -->
+                        <div class="row">
+                            <div class="col-xs-1 col-sm-3"></div>
+                            <div class="col-xs-4 col-sm-1">  
+                              <div class="form-group">
+                                <label for=""><h4>第三选择</h4></label>
+                              </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3">   
+                                <select class="form-control"  name="third">
+                                    <option>技术部</option>
+                                    <option>影音部</option>
+                                    <option>宣传部</option>
+                                    <option>策划部</option>
+                                    <option>外事部</option>
+                                    <option>采编部</option>
+                                  </select>
+                              </div>
+                              <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                            <div class="clearfix visible-xs-block"></div>
+                            <div class="col-xs-3 col-sm-5"></div>
+                          </div>
+                       
+<br>
+<br>
+
+<!-- 登录按钮 -->
+
+<div class="row">
+  <div class="col-xs-1 col-sm-3"></div>
+  <div class="col-xs-4 col-sm-1">  
+    <div class="form-group">
+      
+    </div>
+  </div>
+  <div class="col-xs-4 col-sm-3">   
+    <button type="submit" class="btn btn-success btn-block">申请</button>
+    </div>
+    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-3 col-sm-5"></div>
+</div>
+
+      </form>
+
+    </div>
+    
+{% load static %}
+    <script type='text/javascript' src="{% static 'jquery/dist/jquery.js' %}"></script>
+
+    <script>
+      $('#register_form').on('submit', function (e) {
+        e.preventDefault()
+        var formData = $(this).serialize()
+        $.ajax({
+          url: '/register/',
+          type: 'post',
+          async:false,
+          data: formData,
+          dataType: 'json',
+       
+          success: function (data) {
+            var err_code = data.code
+            if (err_code === 0) {
+              // window.alert('注册成功！')
+              // 服务端重定向针对异步请求无效
+              window.location.href = '/erweima'
+            } else if (err_code === 200) {
+              window.alert('学号已存在')
+            } else if (err_code === 500) {
+              window.alert('请输入学号')
+            }
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

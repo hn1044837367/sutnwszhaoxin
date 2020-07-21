@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>修改学生信息及评价学生</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  </head>
+
+
+  <body>
+    <div class="main">
+
+      <form   action=""  id="form1">
+      
+     
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br><br>
+<!-- 姓名 -->
+        <div class="row">
+            <div class="col-xs-3 col-sm-3"></div>
+            <div class="col-xs-1 col-sm-1">  
+              <div class="form-group">
+                <label for="name"><h4>姓名</h4></label>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3">   
+                <div class="form-group">
+                  <h4>{{students.name}}</h4>
+                </div>
+              </div>
+              <!-- Optional: clear the XS cols if their content doesn't match in height -->
+            <div class="clearfix visible-xs-block"></div>
+            <div class="col-xs-5 col-sm-5"></div>
+          </div>
+
+
+<!-- 性别 -->
+          <div class="row">
+              <div class="col-xs-3 col-sm-3"></div>
+              <div class="col-xs-1 col-sm-1">  
+                <div class="form-group">
+                  <label for="sex"><h4>姓别</h4></label>
+                </div>
+              </div>
+              <div class="col-xs-3 col-sm-3">   
+                <div class="form-group">
+                    <input type="name" class="form-control" id="sex" name="sex" value="{{students.sex}}" >
+                  </div>
+                </div>
+                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+              <div class="clearfix visible-xs-block"></div>
+              <div class="col-xs-5 col-sm-5"></div>
+            </div>
+
+<!-- 学号 -->
+            <div class="row">
+                <div class="col-xs-3 col-sm-3"></div>
+                <div class="col-xs-1 col-sm-1">  
+                  <div class="form-group">
+                    <label for="student"><h4>学号</h4></label>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-sm-3">   
+                    <div class="form-group">
+                      <h4>{{students.studentid}}</h4>
+                    </div>
+                  </div>
+                  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-5 col-sm-5"></div>
+              </div>
+
+<!-- 联系方式 -->
+
+              <div class="row">
+                  <div class="col-xs-3 col-sm-3"></div>
+                  <div class="col-xs-1 col-sm-1">  
+                    <div class="form-group">
+                      <label for="phone"><h4>联系方式</h4></label>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-3">   
+                      <div class="form-group">
+                        <input type="name" class="form-control" id="phone" name="phone" value="{{students.phone}}" >
+                      </div>
+                    </div>
+                    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-xs-5 col-sm-5"></div>
+                </div>
+
+<!-- qq -->
+
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3"></div>
+                    <div class="col-xs-1 col-sm-1">  
+                      <div class="form-group">
+                        <label for="qq"><h4>QQ</h4></label>
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3">   
+                        <div class="form-group">
+                          <input type="name" class="form-control" id="qq" name="qq" value="{{students.qq}}" >
+                        </div>
+                      </div>
+                      <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                    <div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-5 col-sm-5"></div>
+                  </div>
+
+<!-- 特长爱好 -->
+
+                  <div class="row">
+                      <div class="col-xs-3 col-sm-3"></div>
+                      <div class="col-xs-1 col-sm-1">  
+                        <div class="form-group">
+                          <label for="evaluation"><h4>特长爱好</h4></label>
+                        </div>
+                      </div>
+                      <div class="col-xs-3 col-sm-3">   
+                          <div class="form-group">
+                              <h4>{{students.evaluation}}</h4>
+                          </div>
+                        </div>
+                        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                      <div class="clearfix visible-xs-block"></div>
+                      <div class="col-xs-5 col-sm-5"></div>
+                    </div>
+
+<!-- 请选择你想加入的部门 -->
+<!-- 第一选择 -->
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3"></div>
+                        <div class="col-xs-1 col-sm-1">  
+                          <div class="form-group">
+                            <label for=""><h4>第一选择</h4></label>
+                          </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3">   
+                          <div class="col-xs-3 col-sm-3">   
+                              <h4>{{students.first}}</h4>
+                             </div>
+                              </select>
+                          </div>
+                          <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                        <div class="clearfix visible-xs-block"></div>
+                        <div class="col-xs-5 col-sm-5"></div>
+                      </div>
+
+<!-- 第二选择 -->
+
+                      <div class="row">
+                          <div class="col-xs-3 col-sm-3"></div>
+                          <div class="col-xs-1 col-sm-1">  
+                            <div class="form-group">
+                              <label for=""><h4>第二选择</h4></label>
+                            </div>
+                          </div>
+                          <div class="col-xs-3 col-sm-3">   
+                            <div class="col-xs-3 col-sm-3">   
+                                <h4>{{students.second}}</h4>
+                               </div>
+                                </select>
+                            </div>
+                            <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                          <div class="clearfix visible-xs-block"></div>
+                          <div class="col-xs-5 col-sm-5"></div>
+                        </div>
+<!-- 第三选择 -->
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3"></div>
+                            <div class="col-xs-1 col-sm-1">  
+                              <div class="form-group">
+                                <label for=""><h4>第三选择</h4></label>
+                              </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3">   
+                                <div class="col-xs-3 col-sm-3">   
+                                    <h4>{{students.third}}</h4>
+                                   </div>
+                              </div>
+                              <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                            <div class="clearfix visible-xs-block"></div>
+                            <div class="col-xs-5 col-sm-5"></div>
+                          </div>
+
+<!-- 面试官评价 -->
+                          <div class="row">
+                            <div class="col-xs-3 col-sm-3"></div>
+                            <div class="col-xs-1 col-sm-1">  
+                              <div class="form-group">
+                                <label for="command"><h4>面试官评价</h4></label>
+                              </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3">   
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3"  id="command" name="command" ></textarea>
+                                    <script>document.getElementById('command').value="{{students.interview}}"</script>
+                                </div>
+                              </div>
+                              <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                            <div class="clearfix visible-xs-block"></div>
+                            <div class="col-xs-5 col-sm-5"></div>
+                          </div>
+
+
+
+                          <!-- 面试官 -->
+                          <div class="row">
+                              <div class="col-xs-3 col-sm-3"></div>
+                              <div class="col-xs-1 col-sm-1">  
+                                <div class="form-group">
+                                  <label for="interviewer"><h4>面试官</h4></label>
+                                </div>
+                              </div>
+                              <div class="col-xs-3 col-sm-3">   
+                                  <div class="form-group">
+                                      <input type="name" class="form-control" id="interview" name="interview" value="{{students.interview}}" >
+                                  </div>
+                                </div>
+                                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                              <div class="clearfix visible-xs-block"></div>
+                              <div class="col-xs-5 col-sm-5"></div>
+                            </div>
+<br>
+<br>
+
+<!-- 登录按钮 -->
+
+<div class="row">
+  <div class="col-xs-3 col-sm-3"></div>
+  <div class="col-xs-1 col-sm-1">  
+    <div class="form-group">
+      
+    </div>
+  </div>
+  <div class="col-xs-1 col-sm-1">   
+    <button type="submit" class="btn btn-success btn-block"   onclick="form1.action='/mianshiwancheng/';form1.method='post';form1.submit();" id="mianshiwancheng">面试完成</button>
+    </div>
+
+
+    <div class="col-xs-1 col-sm-1">   
+      <button type="submit" class="btn btn-success btn-block"  onclick="form1.action='/luquciren/';form1.method='post';form1.submit();" id="luquciren">录取此人</button>
+      </div>
+
+
+
+      <div class="col-xs-1 col-sm-1">   
+        <button type="submit" class="btn btn-success btn-block" onclick="form1.action='/jujueciren/';form1.method='post';form1.submit();" id="buluquciren">不录取此人</button>
+        </div>
+
+    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-5 col-sm-5"></div>
+</div>
+
+
+<input type="hidden" class="form-control"  name="id"  value="{{students.id}}">
+
+
+       
+      </form>
+
+    </div>
+    {% load static %}
+    <script type='text/javascript' src="{% static 'jquery/dist/jquery.js' %}"></script>
+
+  </body>
+</html>
